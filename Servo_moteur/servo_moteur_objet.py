@@ -9,7 +9,7 @@ maxDuty = 7200
 class Servo_motor :
     position = minDuty
     
-    def __init__(self, signal_sm,increment,breakTime=0.001):
+    def __init__(self, signal_sm, increment=1, breakTime=0.001):
         self.mon_servo = PWM(Pin(signal_sm))
         self.mon_servo.freq(50)
         self.inc = increment
@@ -48,7 +48,7 @@ class Servo_motor :
 
 
 
-sm = Servo_motor(7,5)
+sm = Servo_motor(15,7)
 sm.aller_max()
 sm.change_increment(2)
 sm.aller_min()

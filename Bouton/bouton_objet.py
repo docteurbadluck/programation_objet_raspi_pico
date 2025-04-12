@@ -34,7 +34,7 @@ class Bouton:
 class Bouton_Led(Bouton):
     
     def __init__(self,pin_signal,pin_led) :
-        self.monBouton = Pin(pin_signal, Pin.IN)
+        self.monBouton = Pin(pin_signal, Pin.IN, Pin.PULL_DOWN)
         self.message_test = "button pressed"
         self.click = False
         self.led = Led(pin_led)
@@ -55,7 +55,7 @@ class Bouton_Led(Bouton):
         
         
 
-#mybutton = Bouton_Led(11,15)
+#mybutton = Bouton_Led(15,11)
 
 #mybutton.listening()
 
